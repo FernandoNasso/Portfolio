@@ -1,0 +1,120 @@
+/* Estilos globales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilos para el header */
+header {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    display: flex; /* Hace que los elementos dentro del header se comporten como elementos flexibles */
+    align-items: center; /* Centra verticalmente los elementos dentro del header */
+}
+
+/* Estilos para la imagen en el header */
+header img {
+    width: 100px; /* Ajusta el ancho de la imagen según tus preferencias */
+    height: auto; /* Permite que la altura se ajuste automáticamente manteniendo la proporción */
+    margin-right: 20px; /* Agrega un margen a la derecha de la imagen para separarla del texto */
+}
+
+
+h1 {
+    font-size: 36px;
+    margin: 0;
+}
+
+h2 {
+    font-size: 24px;
+    margin: 0;
+}
+
+p {
+    font-size: 18px;
+}
+
+/* Estilos para secciones */
+section {
+    margin: 30px;
+}
+
+/* Estilos para las tarjetas de proyecto */
+.project-card {
+    display: inline-block;
+    width: 300px;
+    margin: 10px;
+    border: 1px solid #ddd;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    overflow: hidden;
+}
+
+.project-header {
+    background-color: #007BFF;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+}
+
+.project-thumbnail {
+    text-align: center;
+    padding: 20px;
+}
+
+.expand-button {
+    color: #007BFF;
+    text-decoration: underline;
+}
+
+.project-details {
+    display: none; /* Oculta los detalles inicialmente */
+    padding: 10px;
+}
+
+/* Cambiar el cursor al hacer hover */
+.project-card:hover {
+    transform: scale(1.05);
+}
+
+
+/* Estilos para certificaciones */
+.certification {
+    margin-bottom: 20px;
+}
+
+.certification h3 {
+    font-size: 20px;
+}
+
+/* Estilos para experiencia */
+.job {
+    margin-bottom: 20px;
+}
+
+.job h3 {
+    font-size: 20px;
+}
+
+/* Estilos para el pie de página */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+}
+
+/* Estilos para enlaces */
+a {
+    color: #007BFF;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
