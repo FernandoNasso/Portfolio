@@ -11,17 +11,16 @@ header {
     color: #fff;
     text-align: center;
     padding: 20px;
-    display: flex; /* Hace que los elementos dentro del header se comporten como elementos flexibles */
-    align-items: center; /* Centra verticalmente los elementos dentro del header */
+    display: flex;
+    align-items: center;
 }
 
 /* Estilos para la imagen en el header */
 header img {
-    width: 100px; /* Ajusta el ancho de la imagen según tus preferencias */
-    height: auto; /* Permite que la altura se ajuste automáticamente manteniendo la proporción */
-    margin-right: 20px; /* Agrega un margen a la derecha de la imagen para separarla del texto */
+    width: 100px;
+    height: auto;
+    margin-right: 20px;
 }
-
 
 h1 {
     font-size: 36px;
@@ -42,46 +41,90 @@ section {
     margin: 30px;
 }
 
-/* Estilos para las tarjetas de proyecto */
+#projects {
+    text-align: center;
+    margin-top: 20px;
+}
+
+#projects h2 {
+    font-size: 24px;
+    margin-bottom: 20px; /* Agrega margen inferior al título */
+}
+
+.project-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
 .project-card {
-    display: inline-block;
-    width: 300px;
+    width: calc(30%);
+    position: relative;
+    perspective: 1000px;
+    margin-bottom: 20px;
+}
+
+/* Establece un tamaño máximo para las imágenes dentro de las tarjetas */
+.project-card img {
+    max-width: 100%; /* La imagen no será más ancha que la tarjeta */
+    max-height: 100%; /* La imagen no será más alta que la tarjeta */
+}
+
+/* Elimina el width y la perspectiva de .project-inner */
+.project-inner {
+    height: 0;
+    padding-bottom: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.5s;
+}
+
+.project-card:hover .project-inner {
+    transform: rotateY(180deg);
+    width: 100%;
+}
+
+.project-front,
+.project-back {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+    
+}
+
+.project-front {
+    background-color: #f0f0f0;
+}
+
+.project-back {
+    background-color: #cec6c6;
+    transform: rotateY(180deg);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
     margin: 10px;
-    border: 1px solid #ddd;
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
-    background-color: #fff;
-    cursor: pointer;
-    transition: transform 0.3s ease;
-    overflow: hidden;
 }
 
-.project-header {
-    background-color: #007BFF;
+.button-link {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #db00e2;
     color: #fff;
-    text-align: center;
-    padding: 10px;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin: 10px;
 }
 
-.project-thumbnail {
-    text-align: center;
-    padding: 20px;
+.button-link:hover {
+    background-color: #fa10d3;
 }
-
-.expand-button {
-    color: #007BFF;
-    text-decoration: underline;
-}
-
-.project-details {
-    display: none; /* Oculta los detalles inicialmente */
-    padding: 10px;
-}
-
-/* Cambiar el cursor al hacer hover */
-.project-card:hover {
-    transform: scale(1.05);
-}
-
 
 /* Estilos para certificaciones */
 .certification {
@@ -117,4 +160,16 @@ a {
 
 a:hover {
     text-decoration: underline;
+}
+
+.icon1 {
+    width: 30px;
+    height: 30px;
+    background-color: white;
+}
+
+.icon2 {
+    width: 30px;
+    height: 30px;
+    background-color: black;
 }
