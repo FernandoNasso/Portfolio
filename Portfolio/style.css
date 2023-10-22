@@ -95,7 +95,7 @@ header h2 {
     font-size: 24px;
     margin-bottom: 20px;
     background-color: #4fc3dc99; /* Cambia el color de fondo a tu elección */
-    color: #ffffff; /* Cambia el color del texto a blanco o a tu elección */
+    color: #000000; /* Cambia el color del texto a blanco o a tu elección */
     padding: 10px 20px; /* Añade relleno para que la caja se vea bien */
     border-radius: 10px; /* Agrega esquinas redondeadas */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4); /* Agrega una sombra suave */
@@ -115,7 +115,7 @@ section {
 #projects {
     text-align: center;
     margin-top: 20px;
-    min-height:540px; /* Ajusta la altura según sea necesario */
+    min-height:500px; /* Ajusta la altura según sea necesario */
 }
 
 
@@ -260,11 +260,15 @@ section {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4); /* Agrega una sombra suave */
     display: inline-block; /* Hace que la caja se ajuste al texto */
 }
+#experience p {
+    font-size: 18px;
+    color: #ffffff;
+}
 
 /* Estilos para Certificaciones */
 #certifications {
     text-align: center;
-    margin-top: 20px;
+    margin-top: 30px;
     margin-bottom: 20px;
 }
 
@@ -323,7 +327,7 @@ a.cert-link:hover {
     font-size: 24px;
     margin-bottom: 20px;
     background-color: #4fc3dc99; /* Cambia el color de fondo a tu elección */
-    color: #ffffff; /* Cambia el color del texto a blanco o a tu elección */
+    color: #000000; /* Cambia el color del texto a blanco o a tu elección */
     padding: 10px 20px; /* Añade relleno para que la caja se vea bien */
     border-radius: 10px; /* Agrega esquinas redondeadas */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4); /* Agrega una sombra suave */
@@ -333,7 +337,7 @@ a.cert-link:hover {
 #contact p {
     font-size: 20px;
     font-weight: bold;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
     background-color: #ff2d75; /* Cambia el color de fondo a tu elección */
     color: #000000; /* Cambia el color del texto a blanco o a tu elección */
     padding: 10px 20px; /* Añade relleno para que la caja se vea bien */
@@ -342,32 +346,15 @@ a.cert-link:hover {
     display: inline-block; /* Hace que la caja se ajuste al texto */
 }
 
-/* Estilos para el pie de página */
-footer {
-    background-color: #000000;
-    color: #fff;
-    text-align: center;
-    padding: 10px;
-}
-
-/* Estilos para enlaces */
-a {
-    color: #007BFF;
-    text-decoration: none;
-}
-
-a:hover {
-    text-decoration: underline;
-}
-
+/* Estilos para enlaces de contacto*/
 .icon1 {
     width: 50px;
     height: 50px;
     background-color: #ffffff;
     border-radius: 5%;
-    margin-left: 80%;
     border-radius: 25%;
     padding: 2%;
+    margin-top: 10px;
 
 }
 
@@ -376,7 +363,16 @@ a:hover {
     height: 50px;
     background-color: #000000;
     border-radius: 5%;
-    margin-left: 3%;
     border-radius: 25%;
     padding: 2%;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+/* Estilos para el pie de página */
+footer {
+    background-color: #000000;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
 }
