@@ -1,5 +1,7 @@
 /* Estilos globales */
 body {
+    background-color: #333;
+    color: #cec6c6;
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
@@ -8,7 +10,7 @@ body {
 .particles {
     position: fixed;
     display: flex;
-    z-index: -1;
+    z-index: -2;
     padding: 0 20px;
 }
 
@@ -50,7 +52,7 @@ body {
 
 /* Estilos para el header */
 header {
-    background-color: #333;
+    background-color: #000000;
     color: #fff;
     text-align: center;
     padding: 20px;
@@ -65,18 +67,44 @@ header img {
     margin-right: 20px;
 }
 
-h1 {
+header h1 {
     font-size: 36px;
-    margin: 0;
+    margin-bottom: 20px;
+    background-color: #ff2d75; /* Cambia el color de fondo a tu elección */
+    color: #000000; /* Cambia el color del texto a blanco o a tu elección */
+    padding: 5px 5px; /* Añade relleno para que la caja se vea bien */
+    border-radius: 10px; /* Agrega esquinas redondeadas */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4); /* Agrega una sombra suave */
+    display: inline-block; /* Hace que la caja se ajuste al texto */
+    margin-right: 20px;
 }
 
-h2 {
+header h2 {
     font-size: 24px;
-    margin: 0;
+    margin-bottom: 20px;
+    background-color: #4fc3dc99; /* Cambia el color de fondo a tu elección */
+    color: #000000; /* Cambia el color del texto a blanco o a tu elección */
+    padding: 10px 10px; /* Añade relleno para que la caja se vea bien */
+    border-radius: 10px; /* Agrega esquinas redondeadas */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4); /* Agrega una sombra suave */
+    display: inline-block; /* Hace que la caja se ajuste al texto */
+    margin-right: 20px;
 }
 
-p {
+#about h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    background-color: #4fc3dc99; /* Cambia el color de fondo a tu elección */
+    color: #ffffff; /* Cambia el color del texto a blanco o a tu elección */
+    padding: 10px 20px; /* Añade relleno para que la caja se vea bien */
+    border-radius: 10px; /* Agrega esquinas redondeadas */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4); /* Agrega una sombra suave */
+    display: inline-block; /* Hace que la caja se ajuste al texto */
+}
+
+#about p {
     font-size: 18px;
+    color: #ffffff;
 }
 
 /* Estilos para secciones */
@@ -87,37 +115,45 @@ section {
 #projects {
     text-align: center;
     margin-top: 20px;
+    min-height:540px; /* Ajusta la altura según sea necesario */
 }
+
 
 #projects h2 {
     font-size: 24px;
-    margin-bottom: 20px; /* Agrega margen inferior al título */
+    margin-bottom: 20px;
+    background-color: #ff2d75; /* Cambia el color de fondo a tu elección */
+    color: #000000; /* Cambia el color del texto a blanco o a tu elección */
+    padding: 10px 20px; /* Añade relleno para que la caja se vea bien */
+    border-radius: 10px; /* Agrega esquinas redondeadas */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4); /* Agrega una sombra suave */
+    display: inline-block; /* Hace que la caja se ajuste al texto */
 }
+
 
 .project-container {
     display: flex;
-    justify-content: space-around;
     flex-wrap: wrap;
+    justify-content: space-around;
     margin-top: 20px;
 }
 
 .project-card {
-    width: calc(30%);
-    position: relative;
+    width: 28%; /* Redujimos un poco el ancho de las tarjetas */
     perspective: 1000px;
+    margin: 0 10px;
     margin-bottom: 20px;
 }
 
-/* Establece un tamaño máximo para las imágenes dentro de las tarjetas */
-.project-card img {
-    max-width: 100%; /* La imagen no será más ancha que la tarjeta */
-    max-height: 100%; /* La imagen no será más alta que la tarjeta */
+.imgFront {
+    width: 100%;
+    max-height: 100%;
+    border-radius: 5%;
 }
 
-/* Elimina el width y la perspectiva de .project-inner */
 .project-inner {
-    height: 0;
-    padding-bottom: 100%;
+    width: 100%;
+    height: 100%;
     position: relative;
     transform-style: preserve-3d;
     transition: transform 0.5s;
@@ -126,19 +162,29 @@ section {
 .project-card:hover .project-inner {
     transform: rotateY(180deg);
     width: 100%;
+    border-radius: 5%;
 }
 
 .project-front,
 .project-back {
     width: 100%;
-    height: 100%;
+    height: auto; /* Cambiamos la altura a "auto" para que se ajuste automáticamente al contenido */
+    color: #000000;
     position: absolute;
     backface-visibility: hidden;
-    
+    border-radius: 5%;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-bottom: 5%;
+}
+
+.infoProyect {
+    margin: 5%;
 }
 
 .project-front {
     background-color: #f0f0f0;
+    border-radius: 5%;
 }
 
 .project-back {
@@ -146,15 +192,21 @@ section {
     transform: rotateY(180deg);
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
     text-align: center;
     margin: 10px;
+    margin-bottom: 5px;
+    border-radius: 5%;
+}
+
+.button-container {
+    display: flex;
+    justify-content: space-between;
 }
 
 .button-link {
     display: inline-block;
-    padding: 10px 20px;
+    padding: 5px 15px;
     background-color: #db00e2;
     color: #fff;
     text-decoration: none;
@@ -162,34 +214,137 @@ section {
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s;
-    margin: 10px;
+    margin: 5px; /* Ajustamos el margen para subir los botones un poco */
 }
 
 .button-link:hover {
     background-color: #fa10d3;
 }
 
-/* Estilos para certificaciones */
-.certification {
+.iconGithub {
+        width: 50px;
+        height: 50px;
+        background-color: #000000;
+        border-radius: 5%;
+        margin-left: 3%;
+        border-radius: 10%;
+        padding: 2%;
+        margin-bottom: 5px;
+    }
+
+/* Estilos para Experiencia */
+#experience {
+    text-align: center;
+    margin-top: 20px;
     margin-bottom: 20px;
+}
+
+#experience h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    background-color: #ff2d75; /* Cambia el color de fondo a tu elección */
+    color: #000000; /* Cambia el color del texto a blanco o a tu elección */
+    padding: 10px 20px; /* Añade relleno para que la caja se vea bien */
+    border-radius: 10px; /* Agrega esquinas redondeadas */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4); /* Agrega una sombra suave */
+    display: inline-block; /* Hace que la caja se ajuste al texto */
+}
+
+#experience h3 {
+    font-size: 16px; /* Ajusta el tamaño del título */
+    margin-bottom: 5px; /* Reduce el margen inferior del título */
+    background-color: #4fc3dc99; /* Cambia el color de fondo a tu elección */
+    color: #000000; /* Cambia el color del texto a blanco o a tu elección */
+    padding: 10px 20px; /* Añade relleno para que la caja se vea bien */
+    border-radius: 10px; /* Agrega esquinas redondeadas */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4); /* Agrega una sombra suave */
+    display: inline-block; /* Hace que la caja se ajuste al texto */
+}
+
+/* Estilos para Certificaciones */
+#certifications {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+#certifications h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    background-color: #ff2d75; /* Cambia el color de fondo a tu elección */
+    color: #000000; /* Cambia el color del texto a blanco o a tu elección */
+    padding: 10px 20px; /* Añade relleno para que la caja se vea bien */
+    border-radius: 10px; /* Agrega esquinas redondeadas */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4); /* Agrega una sombra suave */
+    display: inline-block; /* Hace que la caja se ajuste al texto */
+}
+
+.certification {
+    margin-bottom: 10px;
 }
 
 .certification h3 {
-    font-size: 20px;
+    font-size: 16px; /* Ajusta el tamaño del título */
+    margin-bottom: 5px; /* Reduce el margen inferior del título */
+    background-color: #4fc3dc99; /* Cambia el color de fondo a tu elección */
+    color: #000000; /* Cambia el color del texto a blanco o a tu elección */
+    padding: 10px 20px; /* Añade relleno para que la caja se vea bien */
+    border-radius: 10px; /* Agrega esquinas redondeadas */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4); /* Agrega una sombra suave */
+    display: inline-block; /* Hace que la caja se ajuste al texto */
 }
 
-/* Estilos para experiencia */
-.job {
+.certification p {
+    font-size: 18px;
+    color: #ffffff; /* Cambia el color del texto a blanco o a tu elección */
+}
+
+/* Estilos para enlaces de certificados */
+a.cert-link {
+    display: inline-block;
+    font-weight: bold;
+    padding: 8px 16px; /* Ajusta el relleno (padding) según tus preferencias */
+    background-color: #ff2d75; /* Cambia el color de fondo a tu elección */
+    color: #000000; /* Cambia el color del texto a blanco o a tu elección */
+    text-decoration: none;
+    border-radius: 5px; /* Agrega esquinas redondeadas */
+    transition: background-color 0.3s; /* Agrega una transición para el color de fondo */
+}
+
+a.cert-link:hover {
+    background-color: #4fc3dc99; /* Cambia el color de fondo al hacer hover */
+}
+
+#contact {
+    margin-bottom: 10px;
+}
+
+#contact h2 {
+    font-size: 24px;
     margin-bottom: 20px;
+    background-color: #4fc3dc99; /* Cambia el color de fondo a tu elección */
+    color: #ffffff; /* Cambia el color del texto a blanco o a tu elección */
+    padding: 10px 20px; /* Añade relleno para que la caja se vea bien */
+    border-radius: 10px; /* Agrega esquinas redondeadas */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4); /* Agrega una sombra suave */
+    display: inline-block; /* Hace que la caja se ajuste al texto */
 }
 
-.job h3 {
+#contact p {
     font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    background-color: #ff2d75; /* Cambia el color de fondo a tu elección */
+    color: #000000; /* Cambia el color del texto a blanco o a tu elección */
+    padding: 10px 20px; /* Añade relleno para que la caja se vea bien */
+    border-radius: 10px; /* Agrega esquinas redondeadas */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4); /* Agrega una sombra suave */
+    display: inline-block; /* Hace que la caja se ajuste al texto */
 }
 
 /* Estilos para el pie de página */
 footer {
-    background-color: #333;
+    background-color: #000000;
     color: #fff;
     text-align: center;
     padding: 10px;
@@ -206,13 +361,22 @@ a:hover {
 }
 
 .icon1 {
-    width: 30px;
-    height: 30px;
-    background-color: white;
+    width: 50px;
+    height: 50px;
+    background-color: #ffffff;
+    border-radius: 5%;
+    margin-left: 80%;
+    border-radius: 25%;
+    padding: 2%;
+
 }
 
 .icon2 {
-    width: 30px;
-    height: 30px;
-    background-color: black;
+    width: 50px;
+    height: 50px;
+    background-color: #000000;
+    border-radius: 5%;
+    margin-left: 3%;
+    border-radius: 25%;
+    padding: 2%;
 }
