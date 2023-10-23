@@ -226,10 +226,41 @@ section {
     }
 
 /* Agrega estilos para hacer que los proyectos sean responsive */
-@media (max-width: 900px) {
+@media (max-width: 768px) {
     .project-card {
-        width: calc(90%);
-        min-height: 470px;
+        width: 100%; /* Ancho completo en dispositivos móviles */
+        margin: 10px 0; /* Espaciado en dispositivos móviles */
+    }
+
+    .project-container {
+        justify-content: center; /* Centrar las tarjetas en dispositivos móviles */
+        min-height: 1800px;
+    }
+
+    .project-front, .project-back {
+        width: 100%; /* Ancho completo en dispositivos móviles */
+        margin: 0; /* Sin margen en dispositivos móviles */
+    }
+
+    .imgFront {
+        max-width: 100%; /* Ancho máximo en dispositivos móviles */
+        max-height: auto;
+    }
+
+    .infoProyect {
+        margin: 10px 0; /* Espaciado en dispositivos móviles */
+    }
+
+    .button-container {
+        flex-direction: column; /* Cambiar la dirección de los botones en dispositivos móviles */
+    }
+
+    .button-link {
+        width: 100%; /* Ancho completo en dispositivos móviles */
+    }
+
+    .iconGithub {
+        margin: 10px auto; /* Centrar el ícono en dispositivos móviles */
     }
 }
 
