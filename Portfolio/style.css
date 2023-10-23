@@ -226,7 +226,7 @@ section {
     }
 
 /* Agrega estilos para hacer que los proyectos sean responsive */
-@media (max-width: 768px) {
+@media (max-width: 900px) {
     .project-card {
         width: calc(90%);
         min-height: 470px;
@@ -234,7 +234,7 @@ section {
 }
 
 /* Aplicar min-height solo en pantallas más grandes */
-@media (min-width: 1000px) {
+@media (min-width: 1200px) {
     #projects {
         min-height: 470px;
     }
