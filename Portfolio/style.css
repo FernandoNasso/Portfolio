@@ -112,24 +112,23 @@ section {
     margin: 30px;
 }
 
+/* Estilos para la sección de proyectos */
 #projects {
     text-align: center;
     margin-top: 20px;
     padding: 30px;
 }
 
-
 #projects h2 {
     font-size: 24px;
     margin-bottom: 20px;
-    background-color: #ff2d75; /* Cambia el color de fondo a tu elección */
-    color: #000000; /* Cambia el color del texto a blanco o a tu elección */
-    padding: 10px 20px; /* Añade relleno para que la caja se vea bien */
-    border-radius: 10px; /* Agrega esquinas redondeadas */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4); /* Agrega una sombra suave */
-    display: inline-block; /* Hace que la caja se ajuste al texto */
+    background-color: #ff2d75;
+    color: #000000;
+    padding: 10px 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+    display: inline-block;
 }
-
 
 .project-container {
     display: flex;
@@ -140,10 +139,23 @@ section {
 
 .project-card {
     width: calc(30% - 10px);
-    margin: 10px;
-    margin-bottom: 10px;
     display: inline-block;
+    margin-bottom: 320px;
 }
+
+@media (max-width: 768px) {
+        .project-card {
+            width: 100%;
+            margin-bottom: 550px;
+        }
+    }
+    
+    /* Estilos para pantallas grandes */
+    @media (min-width: 1201px) {
+        .project-card {
+            width: calc(30% - 10px);
+        }
+    }
 
 .imgFront {
     width: 100%;
@@ -225,58 +237,12 @@ section {
         margin-bottom: 5px;
     }
 
-/* Agrega estilos para hacer que los proyectos sean responsive */
-@media (max-width: 768px) {
-    .project-card {
-        width: 100%; /* Ancho completo en dispositivos móviles */
-        margin: 10px 0; /* Espaciado en dispositivos móviles */
-    }
-
-    .project-container {
-        justify-content: center; /* Centrar las tarjetas en dispositivos móviles */
-        min-height: 1800px;
-    }
-
-    .project-front, .project-back {
-        width: 100%; /* Ancho completo en dispositivos móviles */
-        margin: 0; /* Sin margen en dispositivos móviles */
-    }
-
-    .imgFront {
-        max-width: 100%; /* Ancho máximo en dispositivos móviles */
-        max-height: auto;
-    }
-
-    .infoProyect {
-        margin: 10px 0; /* Espaciado en dispositivos móviles */
-    }
-
-    .button-container {
-        flex-direction: column; /* Cambiar la dirección de los botones en dispositivos móviles */
-    }
-
-    .button-link {
-        width: 100%; /* Ancho completo en dispositivos móviles */
-    }
-
-    .iconGithub {
-        margin: 10px auto; /* Centrar el ícono en dispositivos móviles */
-    }
-}
-
-/* Aplicar min-height solo en pantallas más grandes */
-@media (min-width: 1200px) {
-    #projects {
-        min-height: 470px;
-    }
-}
-
-
 /* Estilos para Experiencia */
 #experience {
     text-align: center;
     margin-top: 20px;
     margin-bottom: 20px;
+    clear: both;
 }
 
 #experience h2 {
