@@ -439,6 +439,22 @@ a.cert-link:hover {
     margin-left: 10px;
 }
 
+.cv {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #ff2d75; /* Cambia el color de fondo a tu elección */
+    color: #fff; /* Color del texto en el enlace */
+    text-decoration: none; /* Quita el subrayado del enlace */
+    border-radius: 5px; /* Agrega esquinas redondeadas */
+    transition: background-color 0.3s; /* Agrega una transición de color al hacer hover */
+    margin: 20px; /* Ajusta el margen según tus preferencias */
+}
+
+.cv:hover {
+    background-color: #4fc3dc99; /* Cambia el color de fondo al hacer hover */
+}
+
+
 /* Estilos para el pie de página */
 footer {
     background-color: rgba(0, 0, 0, 0.9); /* Fondo semitransparente de color negro */
